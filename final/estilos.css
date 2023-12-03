@@ -10,6 +10,18 @@ body {
     justify-content: left;
     align-items: left;
 }
+.contenedor-centradoA {
+    display:flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-centradoB {
+    display:flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
 
 
 p {
