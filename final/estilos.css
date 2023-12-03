@@ -29,8 +29,10 @@ form {
     margin: 0 auto;
     padding: 20px;
     background-color: #f3e9ba;
-    border: 1px solid lightslategray;
-    border-radius: 5px;
+    border-image: linear-gradient(#5e2e64,#7c794f, darkblue, CornflowerBlue) 1 ;
+    border-width: 6px;
+    border-style: solid;
+    border-radius: 0.4em;
     font-family: 'Bangers';
 }
 
