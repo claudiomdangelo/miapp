@@ -39,8 +39,10 @@ table {
     margin: 0 auto;
     padding: 50px;
     background-color: #f3e9ba;
-    border: 8px solid #bbddf2;
-    border-radius: 100px;
+    border-image: linear-gradient(#5e2e64,#7c794f, darkblue, CornflowerBlue) 1 ;
+    border-width: 6px;
+    border-style: solid;
+    border-radius: 0.4em;
 }
 
 label {
@@ -90,7 +92,10 @@ a {
     margin:4px;
     background-color: #bbddf2;
     color: #0056b3;
-    border: none;
+    border-image: linear-gradient(#ffff, DeepSkyBlue) 1 ;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 0.4em;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
