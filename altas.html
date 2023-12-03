@@ -7,36 +7,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar producto</title>
     <link rel="stylesheet" href="estilos.css">
+    <!--Favicon-->
+    <link rel="icon" href="img/FOTOS/FOTOS PROYECTO PYTHON/favicon (2).ico">
+    <!-- Conexion Fontawesome -->
+    <script src="https://kit.fontawesome.com/eb244545a8.js" crossorigin="anonymous"></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Acme&family=Bangers&family=Fugaz+One&family=Gloria+Hallelujah&family=Gochi+Hand&family=Roboto:ital,wght@1,900&family=Shadows+Into+Light&family=Yatra+One&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@500&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <h1>Agregar Productos al Inventario</h1>
-    <h3>Codo a Codo 2023</h3>
-
-    <!--enctype="multipart/form-data" es necesario para enviar archivos al back.-->
-    <form id="formulario" enctype="multipart/form-data">
-        <label for="codigo">Código:</label>
-        <input type="text" id="codigo" name="codigo" required><br>
-
-        <label for="descripcion">Descripción:</label>
-        <input type="text" id="descripcion" name="descripcion" required><br>
-
-        <label for="cantidad">Cantidad:</label>
-        <input type="number" id="cantidad" name="cantidad" required><br>
-
-        <label for="precio">Precio:</label>
-        <input type="number" step="0.01" id="precio" name="precio" required><br>
-
-        <label for="imagenProducto">Imagen del producto:</label>
-        <input type="file" id="imagenProducto" name="imagen">
-
-        <br><br>
-        <label for="proveedorProducto">Proveedor:</label>
-        <input type="text" id="proveedorProducto" name="proveedor">
-        
-        <button type="submit">Agregar Producto</button>
-        <a href="index.html">Menu principal</a>
-    </form>
+    <header>
+        <div>
+            <!--Imagen-->
+            <img src="img/FOTOS/FOTOS PROYECTO PYTHON/viajertiosheader (1).png">
+        </div>
+    </header>
+    <div style="background: #F2EDEB;">
+        <div class="title-api">
+            <h1>Agregar Productos al Inventario</h1>
+        </div>
+    
+        <!--enctype="multipart/form-data" es necesario para enviar archivos al back.-->
+        <form id="formulario" enctype="multipart/form-data">
+            <label for="codigo">Código:</label>
+            <input type="text" id="codigo" name="codigo" required><br>
+    
+            <label for="descripcion">Descripción:</label>
+            <input type="text" id="descripcion" name="descripcion" required><br>
+    
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" required><br>
+    
+            <label for="precio">Precio:</label>
+            <input type="number" step="0.01" id="precio" name="precio" required><br>
+    
+            <label for="imagenProducto">Imagen del producto:</label>
+            <input type="file" id="imagenProducto" name="imagen">
+    
+            <br><br>
+            <label for="proveedorProducto">Proveedor:</label>
+            <input type="text" id="proveedorProducto" name="proveedor">
+            
+            <button type="submit">Agregar Producto</button>
+            <a href="index.html">Menu principal</a>
+        </form>
+    
+        <footer class="footer">
+            <div class="container-footer">
+                <span class="footer-txt">
+                    20230 ViArgertinos- Descubri las maravillas de nuestro pais
+                </span>
+                <div class="social-media">
+                    <a class="icon-social" href="https://www.instagram.com/" title="Instagram" target="_blank">
+                        <i class="fa-brands fa-instagram" style="font-size: 25px;"></i>
+                    </a>
+                    
+                    <a class="icon-social" href="https://www.youtube.com/" title="Youtube" target="_blank">
+                        <i class="fa-brands fa-youtube" style="font-size: 25px;"></i>
+                    </a>
+                    
+                    <a class="icon-social" href="https://www.facebook.com/" title="Facebook" target="_blank">
+                        <i class="fa-brands fa-facebook" style="font-size: 25px;"></i>
+                    </a>
+                    
+                    <a class="icon-social" href="https://www.whatsapp.com/" title="Whatsapp" target="_blank">
+                        <i class="fa-brands fa-whatsapp" style="font-size: 30px;"></i>
+                    </a>
+                </div>
+                <span class="footer-txt">
+                    soporte@viargentinos.com.ar
+                </span>
+            </div>
+        </footer>
+    </div>
 
     <script>
         const URL = "http://127.0.0.1:5000/"

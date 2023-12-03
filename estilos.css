@@ -1,4 +1,36 @@
 /* Estilos para todo el proyecto */
+.footer-txt{
+    font-family: "Acme";
+    color: #6b2f2f;
+}
+.icon-social{
+    color: #551a8b;
+    background-color: unset;
+}
+.container-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px;
+}
+
+.social-media{
+    display: flex;
+    gap: 15px;
+}
+.title-api{
+    padding-top: 4%;
+    font-family: 'Bebas Neue', sans-serif;
+}
+header{
+    padding: 10px;
+    background-image: url("img/Beige-Vintage.png");
+    text-align: right;
+    background-size: cover;
+    margin-bottom: 2%;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
@@ -20,7 +52,7 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
-    color: #007bff;
+    color: #6b2f2f;
 }
 
 form {
@@ -72,22 +104,22 @@ input[type="submit"]:hover {
 button {
     padding: 8px;
     margin:4px;
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: #7cdaf9;
+    color: #6b2f2f;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #b1d4eb;
 }
 
 a {
     padding: 8px;
     margin:4px;
-    background-color: #fdab13;
-    color: #ffffff;
+    background-color: #f1d3d3;
+    color: #6b2f2f;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -96,5 +128,5 @@ a {
 }
 
 a:hover {
-    background-color: #cd7b00;
+    background-color: #ffc1d5;
 }

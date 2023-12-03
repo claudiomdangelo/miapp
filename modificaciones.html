@@ -7,61 +7,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modificar Producto</title>
     <link rel="stylesheet" href="estilos.css">
+    <!--Favicon-->
+    <link rel="icon" href="img/FOTOS/FOTOS PROYECTO PYTHON/favicon (2).ico">
+    <!-- Conexion Fontawesome -->
+    <script src="https://kit.fontawesome.com/eb244545a8.js" crossorigin="anonymous"></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Acme&family=Bangers&family=Fugaz+One&family=Gloria+Hallelujah&family=Gochi+Hand&family=Roboto:ital,wght@1,900&family=Shadows+Into+Light&family=Yatra+One&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@500&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <h1>Modificar Productos del Inventario</h1>
-    <h3>Codo a Codo 2023</h3>
-
-    <!-- Contenedor principal que será controlado por Vue.js. Este contenedor tendrá dos formularios. -->
-    <div id="app">
-        <!-- Primer formulario: Selector de producto. LLama a la función obtenerProducto cuando se envíe el formulario -->
-        <form @submit.prevent="obtenerProducto">
-            <label for="codigo">Código:</label>
-            <input type="text" v-model="codigo" required><br>
-            <button type="submit">Modificar Producto</button> <a href="index.html">Menu principal</a>
-        </form>
-
-        <!-- Segundo formulario: se muestra solo si mostrarDatosProducto es verdadero. Llama a la función guardarCambios -->
-        <div v-if="mostrarDatosProducto">
-            <h2>Datos del Producto</h2>
-            <form @submit.prevent="guardarCambios">
-                <label for="descripcionModificar">Descripción:</label>
-                <input type="text" id="descripcionModificar" v-model="descripcion" required><br>
-
-                <label for="cantidadModificar">Cantidad:</label>
-                <input type="number" id="cantidadModificar" v-model="cantidad" required><br>
-
-                <label for="precioModificar">Precio:</label>
-                <input type="number" step="0.01" id="precioModificar" v-model="precio" required><br>
-
-                <!-- Imagen actual del producto -->
-                <img v-if="imagen_url && !imagenSeleccionada" :src="'./static/imagenes/' + imagen_url"
-                    alt="Imagen del producto" style="max-width: 200px;">
-                
-                <!-- Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere -->
-                <!-- <img v-if="imagen_url && !imagenSeleccionada" :src="'https://www.pythonanywhere.com/user/USUARIO/files/home/USUARIO/mysite/static/imagenes/' + imagen_url"
-                    alt="Imagen del producto" style="max-width: 200px;"> -->
-                             
-
-                <!-- Vista previa de la nueva imagen seleccionada -->
-                <img v-if="imagenSeleccionada" :src="imagenUrlTemp" alt="Vista previa de la nueva imagen"
-                    style="max-width: 200px;">
-
-                <!-- Input para nueva imagen -->
-                <label for="nuevaImagen">Nueva Imagen:</label>
-                <input type="file" id="nuevaImagen" @change="seleccionarImagen"><br>
-
-                <br>
-                <label for="proveModificar">Proveedor:</label>
-                <input type="number" id="proveModificar" v-model="proveedor" required><br>
-
-                <button type="submit">Guardar Cambios</button>
-                <a href="modificaciones.html">Cancelar</a>
-            </form>
+    <header>
+        <div>
+            <!--Imagen-->
+            <img src="img/FOTOS/FOTOS PROYECTO PYTHON/viajertiosheader (1).png">
         </div>
+    </header>
+    <div style="background: #F2EDEB;">
+        <div class="title-api">
+            <h1>Modificar Productos del Inventario</h1>
+        </div>
+    
+        <!-- Contenedor principal que será controlado por Vue.js. Este contenedor tendrá dos formularios. -->
+        <div id="app">
+            <!-- Primer formulario: Selector de producto. LLama a la función obtenerProducto cuando se envíe el formulario -->
+            <form @submit.prevent="obtenerProducto">
+                <label for="codigo">Código:</label>
+                <input type="text" v-model="codigo" required><br>
+                <button type="submit">Modificar Producto</button> <a href="index.html">Menu principal</a>
+            </form>
+    
+            <!-- Segundo formulario: se muestra solo si mostrarDatosProducto es verdadero. Llama a la función guardarCambios -->
+            <div v-if="mostrarDatosProducto">
+                <h2>Datos del Producto</h2>
+                <form @submit.prevent="guardarCambios">
+                    <label for="descripcionModificar">Descripción:</label>
+                    <input type="text" id="descripcionModificar" v-model="descripcion" required><br>
+    
+                    <label for="cantidadModificar">Cantidad:</label>
+                    <input type="number" id="cantidadModificar" v-model="cantidad" required><br>
+    
+                    <label for="precioModificar">Precio:</label>
+                    <input type="number" step="0.01" id="precioModificar" v-model="precio" required><br>
+    
+                    <!-- Imagen actual del producto -->
+                    <img v-if="imagen_url && !imagenSeleccionada" :src="'./static/imagenes/' + imagen_url"
+                        alt="Imagen del producto" style="max-width: 200px;">
+                    
+                    <!-- Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere -->
+                    <!-- <img v-if="imagen_url && !imagenSeleccionada" :src="'https://www.pythonanywhere.com/user/USUARIO/files/home/USUARIO/mysite/static/imagenes/' + imagen_url"
+                        alt="Imagen del producto" style="max-width: 200px;"> -->
+                                 
+    
+                    <!-- Vista previa de la nueva imagen seleccionada -->
+                    <img v-if="imagenSeleccionada" :src="imagenUrlTemp" alt="Vista previa de la nueva imagen"
+                        style="max-width: 200px;">
+    
+                    <!-- Input para nueva imagen -->
+                    <label for="nuevaImagen">Nueva Imagen:</label>
+                    <input type="file" id="nuevaImagen" @change="seleccionarImagen"><br>
+    
+                    <br>
+                    <label for="proveModificar">Proveedor:</label>
+                    <input type="number" id="proveModificar" v-model="proveedor" required><br>
+    
+                    <button type="submit">Guardar Cambios</button>
+                    <a href="modificaciones.html">Cancelar</a>
+                </form>
+            </div>
+        </div>
+    
+        <footer class="footer">
+            <div class="container-footer">
+                <span class="footer-txt">
+                    20230 ViArgertinos- Descubri las maravillas de nuestro pais
+                </span>
+                <div class="social-media">
+                    <a class="icon-social" href="https://www.instagram.com/" title="Instagram" target="_blank">
+                        <i class="fa-brands fa-instagram" style="font-size: 25px;"></i>
+                    </a>
+                    
+                    <a class="icon-social" href="https://www.youtube.com/" title="Youtube" target="_blank">
+                        <i class="fa-brands fa-youtube" style="font-size: 25px;"></i>
+                    </a>
+                    
+                    <a class="icon-social" href="https://www.facebook.com/" title="Facebook" target="_blank">
+                        <i class="fa-brands fa-facebook" style="font-size: 25px;"></i>
+                    </a>
+                    
+                    <a class="icon-social" href="https://www.whatsapp.com/" title="Whatsapp" target="_blank">
+                        <i class="fa-brands fa-whatsapp" style="font-size: 30px;"></i>
+                    </a>
+                </div>
+                <span class="footer-txt">
+                    soporte@viargentinos.com.ar
+                </span>
+            </div>
+        </footer>
     </div>
-
     <script src="https://unpkg.com/vue@next"></script>
     <script>
         const URL = "http://127.0.0.1:5000/"
