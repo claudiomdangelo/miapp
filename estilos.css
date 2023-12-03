@@ -1,17 +1,31 @@
 /* Estilos para todo el proyecto */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Acme', 'fuggles', 'Bangers';
     background-color: #f9f9f9;
 }
 
 .contenedor-centrado {
     display:flex;
     width: 100%;
+    justify-content: left;
+    align-items: left;
+}
+.contenedor-centradoA {
+    display:flex;
+    width: 100%;
     justify-content: center;
+    align-items: center;
+}
+.contenedor-centradoB {
+    display:flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
+
 p {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'fuggles', 'Bangers', 'Acme';
     background-color: #f9f9f9;
     max-width: 400px;
     margin: 0 auto;
@@ -27,23 +41,29 @@ form {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    background-color: white;
-    border: 1px solid lightslategray;
-    border-radius: 5px;
+    background-color: #f3e9ba;
+    border-image: linear-gradient(#5e2e64,#7c794f, darkblue, CornflowerBlue) 1 ;
+    border-width: 6px;
+    border-style: solid;
+    border-radius: 0.4em;
+    font-family: 'Bangers';
 }
 
 table {
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    border: 1px solid lightslategray;
-    border-radius: 5px;
+    padding: 50px;
+    background-color: #f3e9ba;
+    border-image: linear-gradient(#5e2e64,#7c794f, darkblue, CornflowerBlue) 1 ;
+    border-width: 6px;
+    border-style: solid;
+    border-radius: 0.4em;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
+    font-family: 'fuggles';
 }
 
 input[type="text"],
@@ -66,13 +86,13 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #bf6565;
 }
 
 button {
     padding: 8px;
     margin:4px;
-    background-color: #007bff;
+    background-color: #852e79;
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -80,21 +100,25 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #bf6565;
 }
 
 a {
     padding: 8px;
     margin:4px;
-    background-color: #fdab13;
-    color: #ffffff;
-    border: none;
+    background-color: #bbddf2;
+    color: #0056b3;
+    border-image: linear-gradient(#ffff, DeepSkyBlue) 1 ;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 0.4em;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
-    font-size: 85%;
+    font-size: 93%;
+    
 }
 
 a:hover {
-    background-color: #cd7b00;
+    background-color: #bf6565;
 }
