@@ -1,4 +1,37 @@
 /* Estilos para todo el proyecto */
+.footer-txt{
+    font-family: "Acme";
+    color: whitesmoke;
+   }
+.icon-social{
+    color: whitesmoke;
+    background-color: unset;
+}
+.container-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px;
+    background-color:#5e2e64 ;
+}
+
+.social-media{
+    display: flex;
+    gap: 15px;
+}
+.title-api{
+    padding-top: 4%;
+    font-family: 'Bebas Neue', sans-serif;
+}
+header{
+    padding: 0px;
+    background-image: url("static/imagenes/Beige-Vintage.png");
+    text-align: right;
+    background-size:cover;
+    /* margin-bottom: 1%; */
+}
 body {
     font-family: 'Acme', 'fuggles', 'Bangers';
     background-color: #f9f9f9;
@@ -26,7 +59,7 @@ body {
 
 p {
     font-family: 'fuggles', 'Bangers', 'Acme';
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -34,7 +67,7 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
-    color: #007bff;
+    color: #6b2f2f;
 }
 
 form {
@@ -63,7 +96,7 @@ table {
 label {
     display: block;
     margin-bottom: 5px;
-    font-family: 'fuggles';
+    font-family: 'Bangers';
 }
 
 input[type="text"],
@@ -86,32 +119,35 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #bf6565;
+    /* background-color: #bf6565; */
+    background-color: #BF6565
 }
 
 button {
     padding: 8px;
     margin:4px;
-    background-color: #852e79;
-    color: #ffffff;
+    font-family: 'Bangers';
+    background-color: #f1d3d3;
+    color: #6b2f2f;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 93%;
 }
 
 button:hover {
-    background-color: #bf6565;
+    /* background-color: #0056b3; */
+    /* background-color: #cd7b00; */
+    background-color: #BF6565
 }
 
 a {
     padding: 8px;
     margin:4px;
-    background-color: #bbddf2;
-    color: #0056b3;
-    border-image: linear-gradient(#ffff, DeepSkyBlue) 1 ;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 0.4em;
+    font-family: 'Bangers';
+    background-color: #f1d3d3;
+    color: #6b2f2f;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
@@ -120,5 +156,32 @@ a {
 }
 
 a:hover {
-    background-color: #bf6565;
-}
+    /* background-color: #cd7b00; */
+    background-color: #BF6565}
+    
+
+nav{
+    display: flex;
+    font-family: "bangers";
+    color: #BF6565;
+    justify-content: center;
+    background-color: #F2EDEB;
+    padding: 15px 20px;
+    }
+
+    nav a{
+        
+        padding: 10px 10px;
+        text-align: center;
+    }
+
+    nav a:hover{
+        /* background-color: #D9B918; */
+        background-color: #BF6565
+    }
+
+    .portada{
+        background: url(static/imagenes/pxfuel.jpg) no-repeat center center fixed; 
+       
+    }
+   
