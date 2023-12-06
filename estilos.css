@@ -100,8 +100,11 @@ label {
     font-family: 'Bangers';
 }
 
+
 input[type="text"],
 input[type="number"],
+select,
+option,
 textarea {
     width: 90%;
     padding: 10px;
