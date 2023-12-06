@@ -34,10 +34,10 @@
 
     <nav>
         <ul>
-            <i class="fa-solid fa-list fa-2xl"></i><a href="index.html">INICIO        </a>
+            <i class="fa-solid fa-house fa-2xl"></i><a href="menu.html">INICIO        </a>
             <i class="fa-solid fa-list fa-2xl"></i><a href="listado.html">PRODUCTOS   </a>
-            <i class="fa-solid fa-square-pen fa-2xl"></i><a href="listadoEliminar.html">ELIMINAR PRODUCTOS  </a> </a>
-            <i class="fa-solid fa-trash fa-2xl"></i><a href="modificaciones.html">MODIFICAR PRODUCTOS  </a>
+            <i class="fa-solid fa-trash fa-2xl"></i><a href="listadoEliminar.html">ELIMINAR PRODUCTOS  </a> </a>
+            <i class="fa-solid fa-square-pen fa-2xl"></i><a href="modificaciones.html">MODIFICAR PRODUCTOS  </a>
         </ul>
 
     </nav>
@@ -55,9 +55,15 @@
             <label for="descripcion">Descripción:</label>
             <input type="text" id="descripcion" name="descripcion" required><br>
     
-            <label for="cantidad">Cantidad:</label>
-            <input type="number" id="cantidad" name="cantidad" required><br>
+            <!-- <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" required><br> -->
     
+            <label for="cantidad">Cantidad:</label>
+            <input id="t">
+            <input type="range" id="cantidad" name="cantidad" required>
+            <br>
+
+
             <label for="precio">Precio:</label>
             <input type="number" step="0.01" id="precio" name="precio" required><br>
     
@@ -69,7 +75,7 @@
             <input type="text" id="proveedorProducto" name="proveedor">
             
             <button type="submit">AGREGAR PRODUCTO</button>
-            <a href="index.html">MENU PRINCIPAL</a>
+            <!-- <a href="menu.html">MENU PRINCIPAL</a> -->
         </form>
     
         <footer class="footer">
@@ -104,6 +110,11 @@
     <script>
         const URL = "http://127.0.0.1:5000/"
 
+
+        cantidad.oninput =c
+        function c() {
+            t.value = this.value
+        }
         //Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
         //const URL = "https://USUARIO.pythonanywhere.com/"
         

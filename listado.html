@@ -34,12 +34,12 @@
 
     <nav>
         <ul>
-            <i class="fa-solid fa-list fa-2xl"></i><a href="index.html">INICIO        </a>
-            <i class="fa-solid fa-list fa-2xl"></i><a href="altas.html">ALTA DE PRODUCTOS   </a>
-            <i class="fa-solid fa-square-pen fa-2xl"></i><a href="listadoEliminar.html">ELIMINAR PRODUCTOS  </a> </a>
-            <i class="fa-solid fa-trash fa-2xl"></i><a href="modificaciones.html">MODIFICAR PRODUCTOS  </a>
+            <i class="fa-solid fa-house fa-2xl"></i><a href="menu.html">INICIO        </a>
+            <i class="fa-solid fa-circle-check fa-2xl"></i><a href="altas.html">ALTA DE PRODUCTOS   </a>
+            <i class="fa-solid fa-trash fa-2xl"></i><a href="listadoEliminar.html">ELIMINAR PRODUCTOS  </a> </a>
+            <i class="fa-solid fa-square-pen fa-2xl"></i><a href="modificaciones.html">MODIFICAR PRODUCTOS  </a>
         </ul>
-
+        
     </nav>
 
 
@@ -52,7 +52,7 @@
                 <tr>
                     <th>Código</th>
                     <th>Descripción</th>
-                    <th>Cantidad</th>                
+                    <th align="center">Cantidad</th>                
                     <th align="right">Precio</th>
                     <th>Imagen</th>
                     <th align="right">Proveedor</th>
@@ -62,9 +62,9 @@
             <tbody id="tablaProductos"> </tbody>
         </table>
     
-        <div class="contenedor-centrado">
-            <a href="index.html">Menu principal</a>
-        </div>
+        <!-- <div class="contenedor-centrado">
+            <a href="menu.html">Menu principal</a>
+        </div> -->
     
         <footer class="footer">
             <div class="container-footer">
@@ -123,7 +123,7 @@
                     let fila = document.createElement('tr'); //Crea una nueva fila de tabla (<tr>) para cada producto.
                     fila.innerHTML = '<td>' + producto.codigo + '</td>' +
                         '<td>' + producto.descripcion + '</td>' +
-                        '<td align="right">' + producto.cantidad + '</td>' +
+                        '<td align="center">' + producto.cantidad + '</td>' +
                         '<td align="right">' + producto.precio + '</td>' +
                         // Mostrar miniatura de la imagen
                         '<td><img src=./static/imagenes/' + producto.imagen_url +' alt="Imagen del producto" style="width: 100px;"></td>' + '<td align="right">' + producto.proveedor + '</td>';
